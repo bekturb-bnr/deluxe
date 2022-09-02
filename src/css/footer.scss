@@ -1,0 +1,47 @@
+.footer {
+  background: $black;
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    &-text {
+      width: 20%;
+      min-width: 220px;
+    }
+    &-text a {
+      color: $milk;
+    }
+    &-map {
+      border-radius: 5px;
+      width: 50%;
+      min-width: 320px;
+      height: 360px;
+    }
+  }
+  &__h3 {
+    @include text (
+    $rob, normal, 400, 15px, 0, #fff
+    );
+    //font-family: $rob;
+    //font-style: normal;
+    //font-weight: 400;
+    //font-size: 15px;
+    //color: #FFFFFF;
+    padding-bottom: 14px;
+  }
+  &__text {
+    font-family: $rob;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 25px;
+    color: $milk;
+    padding-bottom: 30px;
+  }
+  &__menu {
+    display: flex;
+    column-gap: 10px;
+  }
+
+}

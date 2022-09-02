@@ -1,0 +1,23 @@
+.partner {
+  background: $black;
+  &__h2 {
+    @include text ($gar, normal, 400, 40px, 60px, $milk);
+    width: 50%;
+    padding-bottom: 120px;
+    &-up {
+      @include text ($gar, normal, 700, 40px, 60px, $milk);
+      text-transform: uppercase;
+    }
+
+  }
+  &__cards {
+     display: flex;
+    flex-wrap: wrap;
+     justify-content: space-between;
+    gap: 60px 20px;
+    padding-bottom: 200px;
+    &-img {
+      opacity: .5;
+    }
+   }
+}

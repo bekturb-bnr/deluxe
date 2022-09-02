@@ -1,0 +1,97 @@
+.images {
+  background: $black;
+  padding: 20px 0;
+  position: relative;
+  &__blocks {
+
+    &-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      &:nth-child(even)::before, &:nth-child(odd)::before {
+        position: absolute;
+      }
+      &:nth-child(even)::before{
+        content: url("../images/images_cit_bg.png");
+        top: -35%;
+        right: -15%;
+      }
+      &:nth-child(odd):not(&:first-child)::before{
+        content: url("../images/images_sp_bg.png");
+        top: -18%;
+        left: -15%;
+      }
+      &:last-child::before {
+        content: url("../images/images_ls_bg.png");
+        top: -35%;
+        right: -35%;
+      }
+
+    }
+  }
+  &__img {
+    position: relative;
+    width: 50%;
+    &-card {
+      position: relative;
+      float: left;
+      border-radius: 5px;
+      margin-bottom: 180px;
+    }
+    &-card:last-child {
+      position: absolute;
+      left: 60%;
+      bottom: 8%;
+      opacity: 1;
+    }
+    &-card-right {
+      position: relative;
+      float: right;
+      border-radius: 5px;
+      margin-bottom: 180px;
+      opacity: 1;
+    }
+    &-card-right:last-child{
+      position: absolute;
+      right: 60%;
+      bottom: 8%;
+      opacity: 1;
+    }
+    //&-card-right::before {
+    //  content: '';
+    //  background: url("../images/images_cit_bg.png");
+    //  width: 700px;
+    //  height: 540px;
+    //  position: absolute;
+    //  top: -290px;
+    //  right: -35%;
+    //}
+    &-card-fon2::before {
+      position: absolute;
+      top: -170px;
+      left: -35%;
+    }
+    &-card-fon3::before {
+      position: absolute;
+      top: -350px;
+      right: -60%;
+    }
+
+  }
+  &__span {
+    width: 40%;
+    &-p {
+      @include text ($rob, normal, 400, 10px, 0, #6E6E6E);
+      text-transform: uppercase;
+      padding-bottom: 18px;
+    }
+    &-h2 {
+      @include text ($gar, normal, 700, 40px, 46px, $milk);
+      padding-bottom: 30px;
+    }
+    &-text {
+      @include text ($rob, normal, 400, 16px, 26px, $milk);
+    }
+  }
+}

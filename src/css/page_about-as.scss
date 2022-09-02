@@ -1,0 +1,82 @@
+.about__top {
+  height: 330px;
+  background: url("../images/about__top-bg.png") center/cover no-repeat;
+  &-p {
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 0;
+    text-align: center;
+    @include text ($rob, normal, 400, 14px, 22px, #fff);
+  }
+  &-span {
+    @include text ($rob, normal, 400, 14px, 0, #9F9F9F);
+    margin: 0 auto;
+    display: block;
+    padding-top: 110px;
+  }
+}
+
+.about__video {
+  background: $black;
+  &-content {
+    padding: 80px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-img {
+    width: 100%;
+  }
+  &-link {
+    position: absolute;
+    width: 82px;
+    height: 82px;
+    background-image: url("../../src/icons/video__btn.svg");
+    &::before {
+      content: '▶';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+      color: $milk;
+    }
+  }
+}
+
+.about__tips {
+  &-list {
+
+  }
+  &-item {
+    padding-bottom: 30px;
+    &-h3 {
+      cursor: pointer;
+      position: relative;
+      padding-bottom: 20px;
+      @include text ($gar, normal, 700, 24px, 27px, $milk);
+      &::before {
+        content: url("../icons/btn_down.svg");
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &-text {
+      height: 0;
+      opacity: 0;
+      transition: .5s;
+      @include text ($rob, normal, 400, 1px, 1px, #fff);
+    }
+    &-open > &-text{
+      display: block;
+      opacity: 1;
+      height: 100%;
+      transition: 1s;
+      @include text ($rob, normal, 400, 16px, 24px, #fff);
+    }
+
+  }
+
+}

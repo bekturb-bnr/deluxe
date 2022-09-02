@@ -1,0 +1,216 @@
+.about {
+  position: relative;
+  background: $milk;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    background: $black;
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    z-index: 1;
+  }
+  &::after {
+    content: '';
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    background: $black;
+    clip-path: polygon(100% 100%, 0 100%, 100% 0);
+    z-index: 1;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    gap: 25px 75px;
+    padding-top: 0;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &-link {
+      background: transparent;
+      font-family: $gar;
+      font-size: 14px;
+      color: $milk;
+      padding: 23px 33px;
+      border: 1px solid $milk;
+      border-radius: 5px;
+      min-width: 220px;
+      &-active {
+        background: $milk;
+        color: $black;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    padding: 330px 0 260px;
+    position: relative;
+  }
+
+  &__book {
+    &-img {
+      position: absolute;
+      top: 200px;
+      left: -70%;
+      z-index: 7;
+      opacity: 1;
+
+    }
+  }
+
+  &__desc {
+    width: calc(50% - 40px);
+
+    &-h3 {
+      @include text ($gar, normal, 400, 40px, 60px, $black);
+      margin-bottom: 360px;
+    }
+    &-p {
+      @include text ($rob, normal, 400, 16px, 26px, #404040);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0 300px;
+    &-card {
+      background: $black;
+      width: calc(25% - 23px);
+      min-width: 260px;
+      min-height: 520px;
+      text-align: center;
+      border-radius: 20px;
+      padding: 0 16px;
+      transition: .5s;
+      &-icon {
+        padding: 37px 0;
+      }
+      &-h3 {
+        @include text ($rob, normal, 400, 18px, 28px, #fff);
+        text-transform: uppercase;
+        padding-bottom: 18px;
+      }
+      &-p {
+        @include text ($rob, normal, 400,14px, 24px, $milk);
+        padding-bottom: 10px;
+      }
+    }
+    &-card:hover {
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1320px) {
+}
+
+@media (max-width: 1200px) {
+  .about__book-img {
+    width: 140%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about__book-img {
+    width: 130%;
+  }
+  .about__btn {
+    gap: 20px
+  }
+}
+
+@media (max-width: 992px) {
+  .about__content {
+    padding: 250px 0 100px;
+  }
+  .about__desc-h3 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .about__desc-h3 {
+    margin-bottom: 250px;
+  }
+  .about__cards {
+    gap: 20px;
+  }
+  .about__cards-card {
+    width: calc(50% - 23px);
+    min-width: 10px;
+    min-height: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__content {
+    padding: 200px 0 100px;
+  }
+  .about__desc {
+    width: calc(55% - 20px);
+  }
+  .about__desc-h3 {
+    margin-bottom: 200px;
+  }
+}
+
+@media (max-width: 676px) {
+  .about__desc-h3 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .about__cards-card {
+    width: 100%;
+    height: 100%;
+    min-width: 10px;
+    min-height: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    .about__btn-link {
+      min-width: 145px;
+    }
+  }
+  .about__content {
+    padding: 120px 0 30px;
+  }
+  .about__book-img {
+    display: none;
+  }
+  .about__desc-h3 {
+    margin-bottom: 30px;
+  }
+  .about__desc-p {
+    width: 190%;
+    margin-left: -95%;
+  }
+  .about::before {
+    padding-top: 30px;
+    -webkit-clip-path: polygon(0 0, 0 180px, 100% 0);
+    clip-path: polygon(0 0, 0 180px, 100% 0);
+  }
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 325px) {
+}

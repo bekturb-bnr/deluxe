@@ -1,0 +1,28 @@
+.subfooter {
+  background: #1F1F1F;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 43px 0;
+    position: relative;
+  }
+  &__text {
+    @include text ($rob, normal, 400, 15px, 25px, $milk)
+  }
+  &__text:last-child {
+    text-align: right;
+  }
+  &__text a{
+    color: $milk;
+    text-decoration: underline;
+  }
+}
+
+.header-up-btn {
+  position: fixed;
+  bottom: 5px;
+  right: 20px;
+  z-index: 10;
+  scroll-behavior: smooth;
+  opacity: 1;
+}

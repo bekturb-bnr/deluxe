@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+$gar : 'Cormorant Garamond', serif;
+$rob : 'Roboto', sans-serif;
+$milk : #E1DECE;
+$black : #191919;
+
+@mixin text ($ff, $fs, $fw, $fz, $lh, $col) {
+  @if $ff == $gar{
+    font-family: $gar;
+  };
+  font-style: $fs;
+  @if $fw != 400 {
+    font-weight: $fw;
+  };
+  font-size: $fz;
+  @if $lh > 0 {
+  line-height: $lh;
+};
+  color: $col;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+img {
+  opacity: 90%;
+}
+img:hover {
+  opacity: 100%;
+}
+
+a:link {
+  color: $milk;
+}
+a:visited {
+  color: $milk;
+}
+a:vlink {
+  color: $milk;
+}
+a:active, a:hover {
+  color: #fff;
+}
+
+
+main {
+  background: $black;
+  position: relative;
+}
+.container {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.watermark {
+  font-family: $rob;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 105px;
+    background: linear-gradient(126.33deg, rgba(85, 80, 80, 0.45) -43.79%, rgba(222, 211, 109, 0.05) 52.43%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: .7s;
+  z-index: 7;
+}
+
+.watermark:hover {
+  background: linear-gradient(126.33deg, rgba(85, 80, 80, 0.55) -43.79%, rgba(222, 211, 109, 0.07) 52.43%);
+  background-clip: text;
+  transition: .7s;}
+
+.fancybox__caption {
+  text-align: center;
+  font-family: $gar;
+  font-style: normal;
+  font-weight: 400;
+  color: $milk;
+}
+
+@import "header";
+@import "home";
+@import "flats";
+@import "aside";
+@import "carousel";
+@import "about-us";
+@import "images";
+@import "info";
+@import "step";
+@import "partner";
+@import "footer";
+@import "subfooter";
+
+//Pages
+@import "page_about-as";

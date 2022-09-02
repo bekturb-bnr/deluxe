@@ -1,0 +1,30 @@
+.info {
+  background: $milk;
+  position: relative;
+  &__parent-h2 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__h2 {
+    @include text ($gar, normal, 400, 40px, 60px, $black);
+    width: 50%;
+    padding-bottom: 120px;
+    &-up {
+      @include text ($gar, normal, 700, 40px, 60px, $black);
+      text-transform: uppercase;
+    }
+  }
+  &__text {
+    @include text ($rob, normal, 400, 14px, 24px, #101010);
+    display: flex;
+    gap: 30px;
+    &-p {
+      width: calc(33% - 20px);
+      padding-bottom: 60px;
+    }
+    &-h3 {
+      @include text ($gar, normal, 700, 24px, 36px, #101010);
+      padding-bottom: 30px;
+    }
+  }
+}

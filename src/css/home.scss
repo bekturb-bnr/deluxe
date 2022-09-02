@@ -1,0 +1,148 @@
+.home {
+  padding: 185px 0 249px;
+  background: $black url("../images/main__bg.png") center/cover no-repeat;
+  margin-left: 96px;
+  position: relative;
+  &__title {
+    font-family: $gar;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 62px;
+    text-align: center;
+    color: #FFF
+  }
+  &__subtitle {
+    font-family:$rob;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFF
+  }
+  &__btn {
+    cursor: pointer;
+    height: 62px;
+    border-radius: 31px;
+    display: block;
+    margin: 30px auto 0;
+    padding: 23px 50px;
+    font-family: $rob;
+    font-size: 14px;
+    color: $black;
+    border: none;
+    outline: none;
+  }
+  &__logo {
+    position: absolute;
+    top: -45px;
+    left: -73px;
+    z-index: 10;
+  }
+
+  &__after {
+    position: absolute;
+    right: 10px;
+    bottom: -52px ;
+    z-index: 7;
+    &:hover {
+      background: linear-gradient(126.33deg, rgba(85, 80, 80, 0.55) -43.79%, rgba(222, 211, 109, 0.07) 52.43%);
+      background-clip: text;
+      transition: .7s;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .home__logo {
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 1320px) {
+  .home {
+    margin-left: 0;
+  }
+  
+}
+
+@media (max-width: 1200px) {
+  .home__logo {
+    top: 0;
+    left: 0;
+    width: 130px;
+  }
+}
+@media (max-width: 1024px) {
+  .home {
+    padding: 155px 0 200px;
+
+    &__title {
+      font-size: 40px;
+      line-height: 52px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header__list {
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
+  .home {
+    padding: 135px 0 200px;
+
+    &__title {
+      font-size: 40px;
+      line-height: 52px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 676px) {
+  .home__logo {
+    width: 100px;
+  }
+  .home__title {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .home__btn {
+    height: 46px;
+    border-radius: 23px;
+    padding: 13px 35px;
+  }
+}
+@media (max-width: 576px) {
+  .home__title {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .home__btn {
+    height: 46px;
+    border-radius: 23px;
+    padding: 13px 35px;
+  }
+  .home__subtitle {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+  
+}
+
+@media (max-width: 325px) {
+  
+}

@@ -1,0 +1,33 @@
+.step {
+  background: $black;
+  position: relative;
+  &__h2 {
+    @include text ($gar, normal, 400, 40px, 60px, $milk);
+    width: 50%;
+    padding-bottom: 120px;
+    &-up {
+      @include text ($gar, normal, 700, 40px, 60px, $milk);
+      text-transform: uppercase;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 75px;
+    &-card {
+      width: calc(33.33% - 50px);
+    }
+    &-img {
+      padding-bottom: 50px;
+    }
+    &-h3 {
+      @include text ($rob, normal, 700, 18px, 21px, #fff);
+      padding-bottom: 21px;
+    }
+    &-text {
+      @include text ($rob, normal, 400, 14px, 24px, $milk);
+      padding-bottom: 20px;
+    }
+  }
+}
